@@ -9,7 +9,7 @@ services:
       - monitoring
 
   prometheus:
-    image: prom/prometheus:v2.37.0
+    image: prom/prometheus:latest
     volumes:
       - ./prometheus.yml:/etc/prometheus/prometheus.yml
     ports:
@@ -18,7 +18,7 @@ services:
       - monitoring
 
   grafana:
-    image: grafana/grafana:9.0.0
+    image: grafana/grafana:latest
     environment:
       - GF_SECURITY_ADMIN_PASSWORD=admin
     ports:
